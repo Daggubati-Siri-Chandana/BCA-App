@@ -1,0 +1,1 @@
+The plot depicts a Horizontal Simple Bar Graph illustrating Movie Rating. The plot is between Movie on y-axis over score on the x-axis. The Movie with the highest score 7.47 is 'aliens'. The Movie with the lowest score 4.07 is 'howard the du'. The mean score of Movie is 6.01

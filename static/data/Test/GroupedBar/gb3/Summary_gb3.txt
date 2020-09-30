@@ -1,0 +1,1 @@
+The plot depicts a Vertical Grouped Bar Graph. The plot is between Weight on y-axis over Date on the x-axis for c39, and c52. The Weight of c39 has an overall decreasing trend from d16 to d21. The Weight of c52 starts with 2 in d16 then increases till d20, followed by and finally ends with 1 in d21

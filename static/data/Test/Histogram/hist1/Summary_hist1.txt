@@ -1,0 +1,1 @@
+The plot depicts a Histogram of Position of muscle caveole. The bins range from 25.0 to 482.0 with 19.09 bin width. The mode of a histogram is 25.0 with a frequency of 13. The frequency distribution of histogram is the norm with following parameters loc=0.00, scale=1.00.

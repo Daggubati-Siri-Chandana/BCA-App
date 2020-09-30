@@ -1,0 +1,1 @@
+The plot depicts a Horizontal Simple Bar Graph illustrating Fatalities in filght accidents. The plot is between Flight Id on y-axis over Fatalities on the x-axis. The Flight Id with the highest Fatalities 112.04 is '2'. The Flight Id with the lowest Fatalities 2.72 is '4'. The mean Fatalities of Flight Id is 39.18

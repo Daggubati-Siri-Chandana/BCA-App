@@ -1,0 +1,1 @@
+The plot depicts a Horizontal Simple Bar Graph illustrating Abortion Rate among different age groups. The plot is between Age on y-axis over Abortion rate on the x-axis. The Abortion rate starts with 22 in 14 then increases till 19, followed by a decreasing trend till 39 the end

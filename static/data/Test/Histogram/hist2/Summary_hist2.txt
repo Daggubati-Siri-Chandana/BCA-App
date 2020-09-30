@@ -1,0 +1,1 @@
+The plot depicts a Histogram of Heights of New York Choral Society Singers. The bins range from 61.0 to 75.0 with 2.33 bin width. The mode of a histogram is 66.0 with a frequency of 60. The frequency distribution of histogram is the norm with following parameters loc=0.00, scale=1.00.

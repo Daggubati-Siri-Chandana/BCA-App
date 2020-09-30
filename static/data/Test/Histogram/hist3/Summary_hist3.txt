@@ -1,0 +1,1 @@
+The plot depicts a Histogram with the bins ranging from 0.0 to 10.0 with 1.68 bin width. The mode of a histogram is 2.0 with a frequency of 200. The frequency distribution of histogram is the norm with following parameters loc=0.00, scale=1.00.

@@ -1,0 +1,1 @@
+The plot depicts a Vertical Simple Bar Graph illustrating Tree Heights. The plot is between Height (ft) on y-axis over Index on the x-axis. The Index with the highest Height (ft) 87.55 is '30'. The Index with the lowest Height (ft) 63.46 is '2'. The mean Height (ft) of Index is 76.49

@@ -1,0 +1,156 @@
+{% extends 'layouts/main.html' %} {% block title %}Upload{% endblock %} {% block content %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Upload Image File and annotated XML file</h1>
+</div>
+
+<!--<form method="post" enctype="multipart/form-data">
+    <p><input type="file" name="file">
+        <input type="submit" value="Upload">
+    </p>
+</form>-->
+
+<div class="container text-center">
+	   <form class="form-inline"  action="/upload" method="POST" enctype="multipart/form-data">
+		   <div class="row">
+				<div class="form-group">
+					<span id="file-name" class="file-box"></span>
+				</div>
+				<br>
+				<div class="form-group ">
+					<label class="fileContainer" class="inputfile">
+					<i class="fa fa-upload" aria-hidden="true"></i>
+					Upload Image File
+						<input type="file" name="file" onchange='uploadFile(this)' placeholder='Choose a file...'>
+					</label>
+				</div>
+		   </div>
+		   <div class="row">
+				<div class="form-group">
+					<span id="file-name1" class="file-box"></span>
+				</div>
+				<br>
+				<div class="form-group ">
+					<label class="fileContainer" class="inputfile">
+					<i class="fa fa-upload" aria-hidden="true"></i>
+					Upload XML file
+						<input type="file" name="configfile" onchange='uploadFile1(this)' placeholder='Choose a file...'>
+					</label>
+				</div>
+		   </div>
+		   <div class="row">
+				<br>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-lg" value="Upload">Submit</button>
+				</div>
+		   </div>
+		</form>
+</div>
+<div class="container text-center">
+<h2>Chart Images</h2>
+<p>Upload a Bar chart image (Or) </p>
+<p>Click on the image to Analyze... </p>
+
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/GroupedBar/gb1/')}}" target="_blank">
+  <img src="/static/data/Test/GroupedBar/gb1/gb1.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/GroupedBar/gb2/')}}" target="_blank">
+  <img src="/static/data/Test/GroupedBar/gb2/gb2.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/horizontal_grouped_bar/h_gb02/')}}" target="_blank">
+  <img src="/static/data/Test/horizontal_grouped_bar/h_gb02/h_gb02.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/GroupedBar/gb3/')}}" target="_blank">
+  <img src="/static/data/Test/GroupedBar/gb3/gb3.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/GroupedBar/gb4/')}}" target="_blank">
+  <img src="/static/data/Test/GroupedBar/gb4/gb4.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/horizontal_grouped_bar/h_gb03/')}}" target="_blank">
+  <img src="/static/data/Test/horizontal_grouped_bar/h_gb03/h_gb03.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/HorizontalBar/hb1/')}}" target="_blank">
+  <img src="/static/data/Test/HorizontalBar/hb1/hb1.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/HorizontalBar/hb2/')}}" target="_blank">
+  <img src="/static/data/Test/HorizontalBar/hb2/hb2.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/HorizontalBar/hb3/')}}" target="_blank">
+  <img src="/static/data/Test/HorizontalBar/hb3/hb3.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+	<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/vertical_stacked_bar/sb01/')}}" target="_blank">
+  <img src="/static/data/Test/vertical_stacked_bar/sb01/sb01.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/HorizontalBar/hb4/')}}" target="_blank">
+  <img src="/static/data/Test/HorizontalBar/hb4/hb4.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/HorizontalBar/hb5/')}}" target="_blank">
+  <img src="/static/data/Test/HorizontalBar/hb5/hb5.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/vertical_stacked_bar/sb02/')}}" target="_blank">
+  <img src="/static/data/Test/vertical_stacked_bar/sb02/sb02.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/vertical_simple_bar/bc01/')}}" target="_blank">
+  <img src="/static/data/Test/vertical_simple_bar/bc01/bc01.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/vertical_simple_bar/bc02/')}}" target="_blank">
+  <img src="/static/data/Test/vertical_simple_bar/bc02/bc02.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/HorizontalStackedBar/hsb3/')}}" target="_blank">
+  <img src="/static/data/Test/HorizontalStackedBar/hsb3/hsb3.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/vertical_simple_bar/bc03/')}}" target="_blank">
+  <img src="/static/data/Test/vertical_simple_bar/bc03/bc03.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/vertical_simple_bar/bc04/')}}" target="_blank">
+  <img src="/static/data/Test/vertical_simple_bar/bc04/bc04.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/Histogram/hist3/')}}" target="_blank">
+  <img src="/static/data/Test/Histogram/hist3/hist3.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/Histogram/hist1/')}}" target="_blank">
+  <img src="/static/data/Test/Histogram/hist1/hist1.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/Histogram/hist2/')}}" target="_blank">
+  <img src="/static/data/Test/Histogram/hist2/hist2.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/Histogram/hist4/')}}" target="_blank">
+  <img src="/static/data/Test/Histogram/hist4/hist4.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/Histogram/hist5/')}}" target="_blank">
+  <img src="/static/data/Test/Histogram/hist5/hist5.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+<a target="_blank" href="{{ url_for('reconstruct', path = '/static/data/Test/Histogram/hist6/')}}" target="_blank">
+  <img src="/static/data/Test/Histogram/hist6/hist6.png" alt="Forest" style="width:150px; height:120px;">
+</a>
+</div>
+</body>
+</html>
+
+<script>
+function uploadFile(target) {
+	document.getElementById("file-name").innerHTML = target.files[0].name;
+}
+function uploadFile1(target) {
+	document.getElementById("file-name1").innerHTML = target.files[0].name;
+}
+</script>
+{% endblock %}

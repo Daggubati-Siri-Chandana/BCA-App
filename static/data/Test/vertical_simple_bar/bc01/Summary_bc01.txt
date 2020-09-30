@@ -1,0 +1,1 @@
+The plot depicts a Vertical Simple Bar Graph illustrating Game length for one player version of snakes and ladders. The plot is between Game_Number on y-axis over Game_Length on the x-axis. The Game_Length with the highest Game_Number 114.95 is '7'. The Game_Length with the lowest Game_Number 15.47 is '3'. The mean Game_Number of Game_Length is 36.13

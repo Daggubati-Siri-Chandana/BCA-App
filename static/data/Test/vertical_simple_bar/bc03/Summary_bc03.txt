@@ -1,0 +1,1 @@
+The plot depicts a Vertical Simple Bar Graph illustrating Tallahassee Housing Prices as reported by Zillow. The plot is between Index on y-axis over Price on the x-axis. The Price with the highest Index 813806.37 is '129'. The Price with the lowest Index 88433.24 is '139'. The mean Index of Price is 388657.12

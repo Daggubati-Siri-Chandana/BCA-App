@@ -1,0 +1,1 @@
+The plot depicts a Horizontal Simple Bar Graph illustrating Population of people at 15-24 age in Albania. The plot is between year on y-axis over Population on the x-axis. The Population starts with 274903 in 1985 then increases till 1989, followed by a decreasing trend till 1993 the end

@@ -1,0 +1,2 @@
+The plot depicts a Horizontal Simple Bar Graph illustrating In general, how satisfied are you with your job?. The plot is having Percent of Respondents on x-axis. The Percent of Respondents has an overall decreasing trend from very satisfie to very
+dissatisfied
